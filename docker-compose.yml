@@ -31,14 +31,16 @@ services:
       - postgres
     networks:
       - app-network
-    command:
-      sh -c "
-        echo 'Waiting for 5 seconds for PostgreSQL to be ready...';
-        sleep 5;
-        npm run migrate:up && npm run start:dev
-      "
+    command: sh -c " echo 'Waiting for 5 seconds for PostgreSQL to be ready...'; sleep 5; npm run migrate:up && npm run start:dev "
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
 volumes:
   postgres_data:
+
 
 networks:
   app-network:

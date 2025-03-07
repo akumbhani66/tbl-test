@@ -7,6 +7,8 @@ import { ResponseStatusCode } from './dto/author-response.dto';
 import { ErrorCode } from './types/api-response.types';
 
 describe('AuthorService', () => {
+  let knexService: KnexService;
+  let httpService: HttpService;
   let service: AuthorService;
 
   const mockKnexService = {
