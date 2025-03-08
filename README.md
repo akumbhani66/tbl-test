@@ -8,6 +8,7 @@
 docker-compose up --build
 
 # Access the API at http://localhost:3000
+# Access the adminer to visualize data at http://localhost:8080 (Add host as postgres if it is runing inside docker container)
 ```
 
 ### Local Development
